@@ -17,4 +17,5 @@ include 'services:webservice'
 
 include 'authservice'
 include 'configurationservice'
+include 'eureka-service'
 rootProject.name = 'Template'

@@ -32,7 +32,6 @@ import pl.kohutmariusz.authservice.service.TokenBlackListService;
 
 @Configuration
 @EnableAuthorizationServer
-@RefreshScope
 public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
     private int accessTokenValiditySeconds = 10000;
