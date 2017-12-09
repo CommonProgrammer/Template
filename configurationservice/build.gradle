@@ -17,30 +17,20 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-
+jar {
+    baseName = 'configuration-service'
+    version = '0.0.1-SNAPSHOT'
+}
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
-jar {
-    baseName = 'authentication-service'
-    version = '0.0.1-SNAPSHOT'
-}
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
-    compile('org.springframework.boot:spring-boot-starter-security')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile('org.springframework.security:spring-security-jwt')
-    compile('org.springframework.security.oauth:spring-security-oauth2')
-    compile('io.springfox:springfox-swagger2:2.7.0')
-    compile('io.springfox:springfox-swagger-ui:2.7.0')
-    compile('org.springframework.cloud:spring-cloud-starter-config')
-    compileOnly('org.projectlombok:lombok')
+    compile('org.springframework.cloud:spring-cloud-config-server')
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('org.springframework.security:spring-security-test')
 }
 
 dependencyManagement {

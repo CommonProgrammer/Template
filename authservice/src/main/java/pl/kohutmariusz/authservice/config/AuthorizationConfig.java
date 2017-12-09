@@ -3,6 +3,7 @@ package pl.kohutmariusz.authservice.config;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -31,6 +32,7 @@ import pl.kohutmariusz.authservice.service.TokenBlackListService;
 
 @Configuration
 @EnableAuthorizationServer
+@RefreshScope
 public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
     private int accessTokenValiditySeconds = 10000;

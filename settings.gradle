@@ -16,4 +16,5 @@ include 'services:webservice'
 */
 
 include 'authservice'
+include 'configurationservice'
 rootProject.name = 'Template'
